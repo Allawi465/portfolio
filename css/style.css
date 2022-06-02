@@ -6,7 +6,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #525e65;
+    background: #7ab8bf96;
     font-family: Roboto, sans-serif, Tahoma, verdana;
 }
 
@@ -15,7 +15,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    background: #525e65;
+    background: #1A3E42;
     box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2),0 4px 10px 0 rgba(0,0,0,0.2);
     height: 54px;
     z-index: 999;
@@ -27,7 +27,6 @@ nav {
     position: relative;
     bottom: 14px;
 }
-
 
 nav ul {
     list-style: none;
@@ -66,15 +65,85 @@ nav ul li:hover {
     border-bottom: 4px solid #73CCA8;
 }
 
-section {
+#project, #about, #contact {
     min-height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
 }
 
-@media screen and (min-width: 1082px) {
+#portfolio {
+    padding: 1rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.info-me {
+    margin-top: 25px;
+}
+
+.h1-intro {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.h2-part {
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+
+.portfolio-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.images {
+    max-width: 300px;
+}
+
+.images img {
+    object-fit: cover;
+    width: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.5),0 4px 10px 4px rgba(0,0,0,0.5);
+}
+
+.view-btn {
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.view-btn a {
+    padding: 12px 50px 12px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    transition: all 0.40s ease-in-out;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    background: white;
+}
+
+.fa {
+    position: relative;
+    top: 2px;
+}
+
+.view-btn a:hover .fa {
+    transform: rotate(90deg);
+}
+
+.view-btn a:hover {
+    background-color: #73CCA8;
+}
+
+@media screen and (min-width: 600px) {
     nav ul li a {
         font-size: 20px;
     }
@@ -82,10 +151,78 @@ section {
     nav  ul li {
         margin-left: 25px;
      }
+
+     #portfolio {
+        max-width: 1000px;
+    }
+
+    .portfolio-wrapper {  
+      margin-top: 100px;
+    }
+
+    .info-me {
+        margin-top: 50px;
+    }
+    
+    .h1-intro {
+        font-size: 35px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    .h2-part {
+        text-align: center;
+        font-size: 30px;
+        font-weight: lighter;
+    }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 315px) {
     header {
         height: unset;
     }
+    .info-me {
+        margin-top: unset;
+    }
+}
+
+.arrow-scroll {
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.one, .two, .tree {
+    animation: mouse-scroll 1s infinite;
+}
+
+.one {
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.two {
+  animation-delay: .2s;
+  animation-direction: alternate;
+}
+
+.tree {
+  animation-delay: .3s;
+  animation-direction: alternate;
+}
+
+.arrow {
+  display: block;
+  transform: rotate(45deg);
+  border-right: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+@keyframes mouse-scroll {
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
 }

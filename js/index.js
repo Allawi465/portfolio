@@ -8,7 +8,7 @@ window.addEventListener("scroll", () => {
         const sectionTop = section.offsetTop; 
         const sectionHeight = section.clientHeight;
       /*   console.log(sectionTop) */
-        if (pageYOffset >= ( sectionTop - sectionHeight / 2)) {
+        if (pageYOffset >= ( sectionTop - sectionHeight / 3)) {
             navActiv = section.getAttribute("id");
         }
     })
