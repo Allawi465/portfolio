@@ -65,12 +65,12 @@ nav ul li:hover {
     border-bottom: 4px solid #73CCA8;
 }
 
-#project, #about, #contact {
+#about, #contact {
     min-height: 100vh;
     width: 100%;
 }
 
-#portfolio {
+#portfolio, #project {
     padding: 1rem;
     position: relative;
     margin: 0 auto;
@@ -86,12 +86,24 @@ nav ul li:hover {
     text-align: center;
 }
 
+.project-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 75px;
+}
+
 .h2-part {
     text-align: center;
     font-size: 25px;
     font-weight: lighter;
 }
 
+.project-pargf {
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
 
 .portfolio-wrapper {
     display: flex;
@@ -104,6 +116,7 @@ nav ul li:hover {
 
 .images {
     max-width: 300px;
+    margin-top: 50px;
 }
 
 .images img {
@@ -117,13 +130,13 @@ nav ul li:hover {
 .view-btn {
     display: block;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .view-btn a {
     padding: 12px 50px 12px;
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-    transition: all 0.40s ease-in-out;
+    transition: all 0.10s ease-in-out;
     text-decoration: none;
     color: black;
     font-size: 19px;
@@ -143,6 +156,17 @@ nav ul li:hover {
     background-color: #73CCA8;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.web-card {
+    border: 2px solid red;
+    height: 500px;
+}
+
 @media screen and (min-width: 600px) {
     nav ul li a {
         font-size: 20px;
@@ -152,7 +176,7 @@ nav ul li:hover {
         margin-left: 25px;
      }
 
-     #portfolio {
+     #portfolio,  #project {
         max-width: 1000px;
     }
 
@@ -162,6 +186,10 @@ nav ul li:hover {
 
     .info-me {
         margin-top: 50px;
+    }
+    
+    .images {
+        margin-top: unset;
     }
     
     .h1-intro {
@@ -178,6 +206,7 @@ nav ul li:hover {
 }
 
 @media screen and (max-width: 315px) {
+    
     header {
         height: unset;
     }
@@ -190,6 +219,7 @@ nav ul li:hover {
     display: block;
     text-align: center;
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .one, .two, .tree {
