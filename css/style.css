@@ -444,13 +444,12 @@ label {
 .sosial-link a {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
     justify-content: center;
     text-align: center;
     text-decoration: none;
     color: #1a3e42f7;
     border-radius: 50%;
-    padding: 20px;
+    padding: 14px;
     transition: .3s all;
     box-shadow:
         0.3px 0.3px 2.2px rgba(0, 0, 0, 0.02),
@@ -466,6 +465,45 @@ footer p {
     text-align: center;
     font-family: Tai Heritage Pro;
 }
+
+/* arrow mouse scroll */
+
+.one, .two, .tree {
+    animation: arrowDown 1s infinite;
+}
+
+.one {
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.two {
+  animation-delay: .2s;
+  animation-direction: alternate;
+}
+
+.tree {
+  animation-delay: .3s;
+  animation-direction: alternate;
+}
+
+.arrow {
+  display: block;
+  transform: rotate(45deg);
+  border-right: 2px solid #1a3e42;
+  border-bottom: 2px solid #1a3e42;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.arrow-scroll {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 
 @media screen and (min-width: 600px) {
 
@@ -531,6 +569,16 @@ footer p {
     .skills-about {
         width: 400px;
     }
+
+    .arrow-scroll {
+        margin-top: 170px;
+        margin-bottom: 170px;
+    }
+
+    .sosial-link a {
+        margin-left: 20px;
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 315px) {
@@ -583,44 +631,6 @@ footer p {
         color: white;
     }
     
-}
-
-/* arrow mouse scroll */
-
-.arrow-scroll {
-    display: block;
-    text-align: center;
-    margin-top: 150px;
-    margin-bottom: 170px;
-}
-
-.one, .two, .tree {
-    animation: arrowDown 1s infinite;
-}
-
-.one {
-  animation-direction: alternate;
-  animation-delay: alternate;
-}
-
-.two {
-  animation-delay: .2s;
-  animation-direction: alternate;
-}
-
-.tree {
-  animation-delay: .3s;
-  animation-direction: alternate;
-}
-
-.arrow {
-  display: block;
-  transform: rotate(45deg);
-  border-right: 2px solid #1a3e42;
-  border-bottom: 2px solid #1a3e42;
-  width: 20px;
-  height: 20px;
-  margin: auto;
 }
 
 @keyframes arrowDown {

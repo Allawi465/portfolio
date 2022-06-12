@@ -11,16 +11,14 @@ window.addEventListener("scroll", () => {
         if (pageYOffset >= ( sectionTop - sectionHeight / 3)) {
             navActiv = section.getAttribute("id");
         }
-    })
-
+    });
   /*   console.log(navActiv) */
-
     navList.forEach( li => {
         li.classList.remove("active");
-        if(li.classList.contains(navActiv))[
-            li.classList.add("active")
-        ]
-    })
+        if(li.classList.contains(navActiv)){
+            li.classList.add("active");
+        }
+    });
 });
 
 
