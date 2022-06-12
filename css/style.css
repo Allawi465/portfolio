@@ -444,6 +444,7 @@ label {
 .sosial-link a {
     display: flex;
     flex-direction: row;
+    margin-left: 5px;
     justify-content: center;
     text-align: center;
     text-decoration: none;
@@ -467,6 +468,12 @@ footer p {
 }
 
 /* arrow mouse scroll */
+
+.arrow-scroll a {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
 
 .one, .two, .tree {
     animation: arrowDown 1s infinite;
